@@ -7,6 +7,8 @@ nav a {
     text-align: center;
     color: aliceblue;
     text-decoration: none;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    padding: 35px;
 }
 #hero-box {
     text-align: center;
@@ -15,10 +17,14 @@ nav a {
 
 .home-title {
     color: #582B11;
+    font-family: 'Mooli', sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
 }
 
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
+    font-family: 'Poppins', Helvetica, sans-serif;
 }
 
 .button-box {
@@ -28,6 +34,10 @@ nav a {
 main section {
     text-align: center;
 }
+main section img {
+    box-sizing: border-box;
+}
+     
 
 #backround {
     height: 725px;
@@ -35,6 +45,12 @@ main section {
 
 body {
     background-color: rgb(250, 239, 239); 
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
 }
 header {
     background-color:#89B6A5;
@@ -48,6 +64,11 @@ nav a:hover {
     background-color: #89B6A5;
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+
 }
 
 .book:hover, .join:hover {
@@ -58,15 +79,31 @@ nav a:hover {
 #background {
     background-color: #89B6A5;
 }
-.msg, .msg h2, .msg p {
+.msg, .msg h2 {
     background-color: #89B6A5;
     color: black;
+    font-family: 'Mooli', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    padding: 35px;
+}
+.msg p {
+    background-color: #89B6A5;
+    color: black;
+    font-family: 'Mooli', sans-serif;
+    padding-bottom: 15px;
 }
 
 footer, footer a {
     background-color: #89B6A5;
     color: white;
     text-decoration: none;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    padding: 25px 50px;
+    margin-top: 200px;
+}
+footer .social img {
+    padding-top: 15px;
 }
 
 footer a:hover {
@@ -87,9 +124,20 @@ footer p a:hover {
 
 .logo {
     width: 80px;
+    padding-top: 10px;
 }
-
+logo_link {
+    padding-top: 5px;
+}
 
 #hero-img {
     width: 100%;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid #d9c2a3;
 }
