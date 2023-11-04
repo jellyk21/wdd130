@@ -41,6 +41,7 @@ nav {
     font-size: 2em;
     margin-top: 10px;
 }
+
 #hero-msg {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -142,6 +143,7 @@ footer {
     margin-top: 200px;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 footer a {
     background-color: #89B6A5;
@@ -218,6 +220,29 @@ footer p a:hover {
     box-shadow: 5px 5px 10px #6f7364;
 }
 
+/* Unique css for the FAQ page below -----------------------------------*/
+
+.faq-title {
+    color: #ffffff;
+    font-family: 'Mooli', sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#faq_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+    width: 80%;
+    padding-left: 100px;
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+li {
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------------------*/
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
@@ -257,6 +282,15 @@ footer p a:hover {
     }
     footer {
         margin-top: 25px;
+    }
+
+    #faq_list {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+        width: 80%;
+        padding-left: 50px;
+        font-family: 'Poppins', Helvetica, sans-serif;
     }
 }
            
