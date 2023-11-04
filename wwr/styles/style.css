@@ -23,6 +23,7 @@ nav {
     grid-column: 1/4;
     grid-row: 1/3;
     z-index: -1;
+    width: 100%;
 }
 #hero {
     display: grid;
@@ -38,7 +39,7 @@ nav {
 .home-title {
     color: #48c500;
     font-family: 'Mooli', sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 10px;
 }
 
@@ -56,6 +57,10 @@ nav {
     font-family: 'Poppins', Helvetica, sans-serif;
     color: white;
 }
+#hero-img {
+    width: 100%;
+}
+
 .button-box {
     text-align: center;
 }
@@ -63,6 +68,7 @@ nav {
 .home-grid {
     display: grid;
     grid-template-columns: repeat(10,1fr);
+    margin-top: -800px;
 }
 main section {
     text-align: center;
@@ -71,7 +77,6 @@ main section img {
     box-sizing: border-box;
 }
      
-
 #backround {
     height: 725px;
 }
@@ -183,10 +188,6 @@ footer p a:hover {
     align-self: center;
 }
 
-#hero-img {
-    width: 100%;
-}
-
 .rivers-card {
     margin: 200px 0;
     grid-column: 2/4;
@@ -225,7 +226,7 @@ footer p a:hover {
 .faq-title {
     color: #ffffff;
     font-family: 'Mooli', sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 10px;
 }
 
