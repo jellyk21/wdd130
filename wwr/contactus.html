@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Contact Us</title>
+    <script>
+        function toggleMenu() {
+    var navBar = document.getElementById("nav_bar");
+    if (navBar.className === "") {
+        navBar.className = "responsive";
+    } else {
+        navBar.className = "";
+    }
+}
+    </script>
 </head>
-<body>
-    <header>
-        <a id="logo_link" href="index.html">
-            <img class="logo" src="images/logo.png" alt="Dry Oar Logo">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="faq.html">FAQ</a>
-            <a href="site-plan-rafting.html">Site Plan</a>
-            <a href="contactus.html">Contact Us</a>
-        </nav>
-    </header>
+<body style="background-color: #faf6ee;">
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/TheKellyKrafts-Logo.png" alt="The Kellly Krafts Logo">
+            </a>
+            <nav id="nav_bar">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="ordering.html">Ordering</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+            <button id="menu_button" onclick="toggleMenu()">☰</button>
+        </header>
     <main>
         <div id="feedback"></div>
             <form action="/my-handling-form-page" method="post">

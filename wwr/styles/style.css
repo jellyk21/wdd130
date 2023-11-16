@@ -314,6 +314,7 @@ form {
   
   form li + li {
     margin-top: 1em;
+    font-family: var(--paragraph-font);
   }
   
   label {
@@ -353,7 +354,7 @@ form {
   
   .button {
     /* Align buttons with the text fields */
-    padding-left: 90px; /* same size as the label elements */
+    padding-left: 150px; /* same size as the label elements */
   }
   
   button {

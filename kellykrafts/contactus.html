@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Mooli&family=Playpen+Sans:wght@300;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>The Kelly Krafts | Home</title>
+    <script>
+        function toggleMenu() {
+    var navBar = document.getElementById("nav_bar");
+    if (navBar.className === "") {
+        navBar.className = "responsive";
+    } else {
+        navBar.className = "";
+    }
+}
+    </script>
+</head>
+<body style="background-color: #faf6ee;">
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/TheKellyKrafts-Logo.png" alt="The Kellly Krafts Logo">
+            </a>
+            <nav id="nav_bar">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="ordering.html">Ordering</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+            <button id="menu_button" onclick="toggleMenu()">☰</button>
+        </header>
+<main>
+    <h1>We'd love to hear from you!</h1>
+    <p>Please fill out the form below to send us an email! Alternatively you can connect with us
+        on <a href="https://www.facebook.com/profile.php?id=100089250665335" alt="Facebook link">Facebook</a> or email directly at thekellykrafts@gmail.com. Thank you!
+    </p>
+
+    <div id="feedback"></div>
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <ul>
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" placeholder="Enter your name here"/>
+          </li>
+          <li>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" placeholder="Enter you email address here." />
+          </li>
+          <li>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message" placeholder="Enter your message here."></textarea>
+          </li>
+          <li class="button">
+            <button type="submit">Send your message</button>
+          </li>
+        </ul>
+      </form>   
+      <script src="https://smtpjs.com/v3/smtp.js"></script> 
+      <script>
+        function sendEmail(){
+            SecureToken :
+            Email.send({
+            To : 'thekellykrafts@gmail.com',
+            From : document.getElementById("mail").value,
+            Subject : "Customer Feedback",
+            Body : "name" + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("mail").value
+                + "<br> Message: " + document.getElementById("msg").value
+        }).then(
+  message => alert(message)
+);  
+        }
+      </script> 
+</main>
+            <footer>
+                <p>The Kelly Krafts &copy; 2023</p>
+                <p><a href="site-plan.html">Site Plan</a></p>
+                <div class="social">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100089250665335">
+                        <img src="images/facebook.png" alt="fb icon">
+                    </a>
+                    </a>
+                    <a target="_blank" href="https://instagram.com">
+                        <img src="images/instagram.png" alt="instagram icon">
+                    </a>
+            </footer>
+</body>
+<script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function(e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle('moveDown');
+    });
+</script>
+</html>
