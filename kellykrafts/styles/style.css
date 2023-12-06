@@ -474,14 +474,14 @@ button:hover {
 }
 /* hero msg*/
 #hero-msg {
-  scale: 50%;
+  /*scale: 50%;*/
   position: inherit;
   margin: 0 auto;
   background-color: #faf6ee;
 }
 
 #menu_button{
-  scale: 85%;
+  /*scale: 85%;*/
   padding: 0%;
 }
 
